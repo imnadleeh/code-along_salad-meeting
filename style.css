@@ -6,6 +6,71 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+/* hamburger menu */
+
+#hmb {
+  width: 32px;
+  height: 28px;
+  cursor: pointer;
+  position: relative;
+  z-index: 30;
+}
+
+#hmb span {
+  width: 32px;
+  height: 3px;
+  display: block;
+  background-color: #000000;
+  border-radius: 2px;
+  position: absolute;
+  transition: 0.2s;
+}
+
+#hmb span:first-child {
+  top: 0;
+}
+
+#hmb span:nth-child(2) {
+  top: 12px;
+}
+
+#hmb span:last-child {
+  top: 24px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: aquamarine;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition-property: all;
+  transition-duration: .2s;
+}
+
+.active #hmp span:first-child {
+  top: 12px;
+  transform: rotate(45deg);
+}
+
+.active #hmb span:nth-child(2) {
+  display: none;
+}
+
+.active #hmb span:last-child {
+  top: 12px;
+  transform: rotate(-45deg);
+}
+
 /* header */
 
 .container {
@@ -138,19 +203,25 @@ header {
   top: 0;
   right: 0;
   transform: translateY(-30%);
-  z-index: -1;
 }
 
-.heading-normal {
+.heading-business {
   top: 0;
   right: 0;
   transform: translateY(-30%);
   z-index: -1;
 }
 
-.heading-reverse {
+.heading-recipe {
   top: 0;
   left: 0;
+  transform: translateY(-30%);
+  z-index: -1;
+}
+
+.heading-event {
+  top: 0;
+  right: 0;
   transform: translateY(-30%);
   z-index: -1;
 }
@@ -158,7 +229,6 @@ header {
 #service {
   margin-bottom: 9.375rem;
 }
-
 
 .service-inner {
   margin-bottom: 5.75rem;
@@ -296,7 +366,7 @@ footer {
   }
   .concept-img {
     margin-top: 3rem;
-    }
+  }
   .column-40 {
     width: 100%;
     margin-bottom: 2rem;
@@ -310,9 +380,24 @@ footer {
   #company dl {
     font-size: 13px;
   }
-  .column-a, .column-b, .column-c, .column-d {
+  .column-a,
+  .column-b,
+  .column-c,
+  .column-d {
     width: 48%;
     height: 8.75rem;
     margin: 1%;
+  }
+  .heading {
+    font-size: 0;
+  }
+  #company {
+    margin-bottom: 5rem;
+  }
+  #service {
+    margin-bottom: 4.25rem;
+  }
+  .service-inner {
+    margin-bottom: 3rem;
   }
 }

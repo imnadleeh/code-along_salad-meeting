@@ -25,11 +25,16 @@
 
 <body>
 
-  <header>
-    <div class="container flex pop">
+  <header id="header" class="active">
+    <a href="" class="container flex pop">
       <p class="logo">
         <span>salad</span> meeting
       </p>
+      <div id="hmb">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <nav>
         <ul class="header-menu flex">
           <li><a href="#concept">Concept</a></li>
@@ -37,7 +42,7 @@
           <li><a href="#company">Company</a></li>
         </ul>
       </nav>
-    </div>
+    </a>
   </header>
 
   <main>
@@ -77,7 +82,7 @@
           <img src="images/image_3.jpg" alt="a person eating salad">
         </div>
         <div class="column-55">
-          <div class="heading heading-normal">Business</div>
+          <div class="heading heading-business">Business</div>
           <h3>サラダを提供するビジネスランチイベント</h3>
           <p class="text">健康的な食事を提供しながら、ビジネスや社会人交流の場を提供するイベントです. 参加者は、自由にサラダの材料を選び、
             オリジナルのサラダを作りながら、楽しく交流することができます。
@@ -90,7 +95,7 @@
           <img src="images/image_4.jpg" alt="a dish of salad">
         </div>
         <div class="column-55">
-          <div class="heading heading-reverse">Recipe</div>
+          <div class="heading heading-recipe">Recipe</div>
           <h3>サラダレシピの共有プラットフォーム</h3>
           <p class="text">サラダの作り方や材料の組み合わせなど、サラダに関する情報を共有するプラットフォームです。ユーザーは、
             自分が作ったオリジナルのサラダレシピを投稿し、他のユーザーと情報を共有することができます。
@@ -103,7 +108,7 @@
           <img src="images/image_5.jpg" alt="variety of vegetables">
         </div>
         <div class="column-55">
-          <div class="heading heading-normal">Event</div>
+          <div class="heading heading-event">Event</div>
           <h3>サラダに関するイベント情報の提供</h3>
           <p class="text">サラダに関するイベント情報を提供するサービスです。例えば、サラダのフェスティバルやサラダのレシピコンテストなど、
             サラダに関するイベント情報を提供し、ユーザーが新しいサラダのレシピを学んだり、サラダに関する情報交換をすることができます。
@@ -152,6 +157,15 @@
     </p>
 
   </footer>
+
+  <script>
+    const hmbBtn = document.getElementById("hmb");
+    const header = document.getElementById("header");
+
+    hmbBtn.addEventListener("click", function () {
+      header.classList.toggle("active");
+    });
+  </script>
 
 </body>
 
