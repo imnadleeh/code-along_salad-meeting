@@ -6,73 +6,6 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-/* hamburger menu */
-
-#hmb {
-  width: 32px;
-  height: 28px;
-  cursor: pointer;
-  position: relative;
-  z-index: 30;
-}
-
-#hmb span {
-  width: 32px;
-  height: 3px;
-  display: block;
-  background-color: #000000;
-  border-radius: 2px;
-  position: absolute;
-  transition: 0.2s;
-}
-
-#hmb span:first-child {
-  top: 0;
-}
-
-#hmb span:nth-child(2) {
-  top: 12px;
-}
-
-#hmb span:last-child {
-  top: 24px;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 80%;
-  height: 100vh;
-  max-width: 400px;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: aquamarine;
-  z-index: 20;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(100%);
-  transition-property: all;
-  transition-duration: .2s;
-}
-
-.active #hmp span:first-child {
-  top: 12px;
-  transform: rotate(45deg);
-}
-
-.active #hmb span:nth-child(2) {
-  display: none;
-}
-
-.active #hmb span:last-child {
-  top: 12px;
-  transform: rotate(-45deg);
-}
-
-/* header */
-
 .container {
   width: 90%;
   max-width: 70rem;
@@ -88,7 +21,7 @@ nav {
 }
 
 header {
-  padding: 1.6875rem 0;
+  padding: 1.6875rem;
 }
 
 .logo {
@@ -258,7 +191,7 @@ img {
   flex-direction: row-reverse;
 }
 
-/* company */
+/* company detail */
 
 #company {
   margin-bottom: 7.5rem;

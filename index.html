@@ -25,16 +25,11 @@
 
 <body>
 
-  <header id="header" class="active">
-    <a href="" class="container flex pop">
+  <header>
+    <div class="container flex pop">
       <p class="logo">
         <span>salad</span> meeting
       </p>
-      <div id="hmb">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
       <nav>
         <ul class="header-menu flex">
           <li><a href="#concept">Concept</a></li>
@@ -42,7 +37,7 @@
           <li><a href="#company">Company</a></li>
         </ul>
       </nav>
-    </a>
+    </div>
   </header>
 
   <main>
@@ -157,15 +152,6 @@
     </p>
 
   </footer>
-
-  <script>
-    const hmbBtn = document.getElementById("hmb");
-    const header = document.getElementById("header");
-
-    hmbBtn.addEventListener("click", function () {
-      header.classList.toggle("active");
-    });
-  </script>
 
 </body>
 
